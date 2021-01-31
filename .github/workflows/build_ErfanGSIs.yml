@@ -61,7 +61,7 @@ jobs:
        - name: Upload GSI to CowKuaiChuan
          run: |
               curl -sL https://git.io/cowtransfer | sh
-              .cowtransfer-uploader /usr
+              .cowtransfer-uploader -c
 
          
             
