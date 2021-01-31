@@ -51,17 +51,17 @@ jobs:
               sudo bash setup.sh
        
        - name: Download Stock Rom & Generate GSI
-         run: sudo ./ErfanGSIs/url2GSI.sh $ROM_URL $ROM_NAME
+         run: sudo ./ErfanGSIs/url2GSI.sh $ROM_URL $ROM_NAME -a
        
        - name: Zip GSI  
          run: |
               mkdir final
               zip -r final/GSI.zip /home/runner/work/actions_build_ErfanGSIs/actions_build_ErfanGSIs/ErfanGSIs/output/
        
-       - name: Upload GSI to BitSend
+       - name: Upload GSI to CowKuaiChuan
          run: |
               curl -sL https://git.io/cowtransfer | sh
-              .cowtransfer-uploader final/GSI.zip
+              .cowtransfer-uploader /GSI.zip
 
          
             
